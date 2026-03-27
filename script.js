@@ -10,7 +10,7 @@ function calculate() {
     try {
         currentInput = eval(currentInput);
         display.value = currentInput;
-    } catch (e) {
+    } catch(e) {
         display.value = "Error";
         currentInput = '';
     }
