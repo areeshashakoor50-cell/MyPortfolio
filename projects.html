@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
     <h2 class="logo">Areesha</h2>
     <ul class="nav-links">
@@ -19,21 +18,49 @@
     </ul>
 </nav>
 
-<!-- Projects Section -->
 <section class="projects">
     <h1>My Projects</h1>
 
+    <!-- Calculator Project Card -->
     <div class="project-card">
         <h3>Calculator App</h3>
         <p>A simple calculator built with HTML, CSS, and JavaScript.</p>
         <div class="project-links">
-            <a href="index.html" class="btn">Live Demo</a>
-            <a href="https://github.com/areeshashakoor50-cell/MyPortfolio" class="btn secondary">GitHub</a>
+            <a href="#calculator-section" class="btn">Live Demo</a>
+            <a href="https://github.com/areeshashakoor50-cell/MyPortfolio" target="_blank" class="btn">GitHub</a>
         </div>
     </div>
 
-    <!-- Future Projects can be added here as more cards -->
+    <!-- Calculator Section -->
+    <section id="calculator-section" class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button onclick="press('/')">/</button>
+
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('*')">*</button>
+
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button onclick="press('-')">-</button>
+
+            <button onclick="press('0')">0</button>
+            <button onclick="press('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="press('+')">+</button>
+
+            <button onclick="clearDisplay()" style="grid-column: span 4;">C</button>
+        </div>
+    </section>
+
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
