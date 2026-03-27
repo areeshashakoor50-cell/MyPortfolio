@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects - Areesha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areesha Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <h2>Areesha</h2>
-    <ul>
+<!-- Navbar -->
+<nav class="navbar">
+    <h2 class="logo">Areesha</h2>
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -17,63 +19,21 @@
     </ul>
 </nav>
 
-<section class="projects-section">
-    <h1>My Projects</h1>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Areesha</span> 👋</h1>
+        <p>
+            Frontend Developer passionate about building clean,
+            responsive and user-friendly websites using HTML, CSS & JavaScript.
+        </p>
 
-    <div class="calculator">
-        <input type="text" id="display" disabled>
-
-        <div class="buttons">
-            <button onclick="press('7')">7</button>
-            <button onclick="press('8')">8</button>
-            <button onclick="press('9')">9</button>
-            <button onclick="press('/')">/</button>
-
-            <button onclick="press('4')">4</button>
-            <button onclick="press('5')">5</button>
-            <button onclick="press('6')">6</button>
-            <button onclick="press('*')">*</button>
-
-            <button onclick="press('1')">1</button>
-            <button onclick="press('2')">2</button>
-            <button onclick="press('3')">3</button>
-            <button onclick="press('-')">-</button>
-
-            <button onclick="press('0')">0</button>
-            <button onclick="press('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="press('+')">+</button>
-
-            <button onclick="clearDisplay()" style="grid-column: span 4; background:#ff4444;">C</button>
+        <div class="hero-buttons">
+            <a href="projects.html" class="btn">View Projects</a>
+            <a href="contact.html" class="btn secondary">Contact Me</a>
         </div>
     </div>
-
 </section>
-
-<script>
-    let display = document.getElementById('display');
-    let currentInput = '';
-
-    function press(val){
-        currentInput += val;
-        display.value = currentInput;
-    }
-
-    function calculate(){
-        try {
-            currentInput = eval(currentInput);
-            display.value = currentInput;
-        } catch (e) {
-            display.value = "Error";
-            currentInput = '';
-        }
-    }
-
-    function clearDisplay(){
-        currentInput = '';
-        display.value = '';
-    }
-</script>
 
 </body>
 </html>
