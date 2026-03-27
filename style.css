@@ -1,8 +1,15 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Purple gradient */
+    color: #fff;
 }
 
 /* Navbar */
@@ -11,12 +18,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: black;
-    color: white;
+    background: rgba(255, 255, 255, 0.1); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
 }
 
 .logo {
     font-size: 24px;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -30,13 +40,13 @@
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     transition: 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #00adb5;
+    color: #d1c4e9; /* light purple hover */
 }
 
 /* Hero Section */
@@ -46,24 +56,20 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #f5f5f5;
     padding: 20px;
 }
 
 .hero-content h1 {
     font-size: 42px;
     margin-bottom: 10px;
-}
-
-.hero-content span {
-    color: #00adb5;
+    color: #e0bbff;
 }
 
 .hero-content p {
     font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
     max-width: 500px;
+    margin: auto;
+    color: #f3e5f5;
 }
 
 .hero-buttons .btn {
@@ -74,23 +80,17 @@
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    background: black;
-    color: white;
+    background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+    color: #fff;
+    border-radius: 12px;
+    border: 1px solid #fff;
     text-decoration: none;
-    border-radius: 6px;
+    backdrop-filter: blur(5px);
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #00adb5;
-}
-
-.secondary {
-    background: #00adb5;
-}
-
-.secondary:hover {
-    background: black;
+    background: rgba(255, 255, 255, 0.4);
 }
 
 /* About, Contact, Projects Sections */
@@ -99,30 +99,32 @@
     text-align: center;
     max-width: 700px;
     margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-bottom: 30px;
 }
 
 /* Project Card */
 .project-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     padding: 25px;
     margin: 20px auto;
     max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.project-links {
-    margin-top: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
 
 /* Calculator */
 .calculator {
     max-width: 300px;
     margin: 30px auto;
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
 
 .calculator input {
@@ -133,7 +135,9 @@
     font-size: 24px;
     padding: 5px;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
 }
 
 .calculator .buttons {
@@ -146,15 +150,15 @@
     padding: 15px 0;
     font-size: 18px;
     border: none;
-    border-radius: 6px;
-    background: black;
-    color: white;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .calculator button:hover {
-    background: #00adb5;
+    background: rgba(255,255,255,0.4);
 }
 
 /* Responsive */
@@ -169,5 +173,8 @@
     }
     .nav-links li {
         margin: 10px 0;
+    }
+    .hero-content h1 {
+        font-size: 32px;
     }
 }
