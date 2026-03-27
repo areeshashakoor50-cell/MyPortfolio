@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Areesha Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <h2>Areesha</h2>
-    <ul>
+<!-- Navbar -->
+<nav class="navbar">
+    <h2 class="logo">Areesha</h2>
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -17,10 +19,20 @@
     </ul>
 </nav>
 
+<!-- Hero Section -->
 <section class="hero">
-    <h1>Hi, I'm Areesha ✨</h1>
-    <p>Creative Web Developer building modern and interactive websites.</p>
-    <a href="projects.html" class="btn">View My Work</a>
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Areesha</span> 👋</h1>
+        <p>
+            Frontend Developer passionate about building clean,
+            responsive and user-friendly websites using HTML, CSS & JavaScript.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="projects.html" class="btn">View Projects</a>
+            <a href="contact.html" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
 </section>
 
 </body>
