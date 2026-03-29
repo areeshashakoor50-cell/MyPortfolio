@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Areesha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2 class="logo">Areesha</h2>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="projects">
+    <h1>My Projects</h1>
+
+    <!-- Calculator Project Card -->
+    <div class="project-card">
+        <h3>Calculator App</h3>
+        <p>A simple calculator built with HTML, CSS, and JavaScript.</p>
+        <div class="project-links">
+            <a href="#calculator-section" class="btn">Live Demo</a>
+            <a href="https://github.com/areeshashakoor50-cell/MyPortfolio" target="_blank" class="btn secondary">GitHub</a>
+        </div>
+    </div>
+
+    <!-- MoodMate Project Card -->
+    <div class="project-card">
+        <h3>MoodMate</h3>
+        <p>An interactive web app to track your daily moods. Click buttons to record how you feel and get instant personalized feedback. Built with HTML, CSS, and JavaScript.</p>
+        <div class="project-links">
+            <a href="#moodmate-section" class="btn">Live Demo</a>
+            <a href="https://areeshashakoor50-cell/MoodMate" target="_blank" class="btn secondary">GitHub</a>
+        </div>
+    </div>
+</section>
+
+<!-- Calculator Section -->
+<section id="calculator-section" class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button onclick="press('/')">/</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button onclick="press('*')">*</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button onclick="press('-')">-</button>
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="press('+')">+</button>
+
+        <button onclick="clearDisplay()" style="grid-column: span 4;">C</button>
+    </div>
+</section>
+
+<!-- MoodMate Section -->
+<section id="moodmate-section" class="moodmate">
+    <h2>MoodMate – Track Your Mood</h2>
+    <p>Click a mood to see a personalized response!</p>
+
+    <div class="mood-buttons">
+        <button onclick="setMood('Happy')">😊 Happy</button>
+        <button onclick="setMood('Sad')">😢 Sad</button>
+        <button onclick="setMood('Angry')">😡 Angry</button>
+        <button onclick="setMood('Excited')">🤩 Excited</button>
+    </div>
+
+    <div id="result" class="mood-result"></div>
+    <p id="lastMood"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

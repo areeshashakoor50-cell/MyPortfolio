@@ -1,0 +1,232 @@
+/* ================== GLOBAL STYLES ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8e2de2, #ff6ec4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    width: 90%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffd1f0;
+}
+
+/* ================== HERO ================== */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    color: #ffe0f5;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #f3e5f5;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* ================== BUTTONS ================== */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #9b59b6, #ff79ac);
+    color: #fff;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #d08ff7, #ff9fc9);
+}
+
+/* ================== SECTIONS ================== */
+.about,
+.contact,
+.projects {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* ================== PROJECT CARD ================== */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Project Links */
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.project-links a.btn.secondary {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid #fff;
+}
+
+.project-links a.btn.secondary:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ================== CALCULATOR ================== */
+.calculator {
+    max-width: 300px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.calculator input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator button {
+    padding: 15px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calculator button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* ================== MOODMATE ================== */
+.moodmate {
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.mood-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.mood-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.3s;
+}
+
+.mood-buttons button:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.mood-result, #lastMood {
+    color: #ffd1f0;
+    font-size: 16px;
+}
+
+/* ================== RESPONSIVE ================== */
+@media screen and (max-width: 768px) {
+    .navbar { flex-direction: column; align-items: flex-start; }
+    .nav-links { flex-direction: column; width: 100%; }
+    .nav-links li { margin: 10px 0; }
+    .hero-content h1 { font-size: 32px; }
+    .project-card, .calculator, .moodmate { width: 90%; }
+}
